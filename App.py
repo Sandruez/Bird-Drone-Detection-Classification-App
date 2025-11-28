@@ -7,8 +7,6 @@ from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from PIL import Image
 import cv2
 import tempfile
-import warnings
-warnings.filterwarnings("ignore", category=UserWarning)
 
 
 # Load YOLO model
