@@ -89,3 +89,31 @@ Ensure you have Python installed. Then, clone the repository:
 ```bash
 git clone [https://github.com/Sandruez/Bird-Drone-Detection-Classification-App.git](https://github.com/Sandruez/Bird-Drone-Detection-Classification-App.git)
 cd Bird-Drone-Detection-Classification-App
+```
+### Step 1: Install Dependencies
+```
+Bash
+pip install -r requirements.txt
+```
+### Step 2: Run the Application
+````
+Bash
+streamlit run app.py
+````
+### Step 3: Train YOLOv8 (Optional)
+
+To retrain the detection model on your own data:
+```
+Python
+
+from ultralytics import YOLO
+model = YOLO('yolov8s.pt')
+model.train(data='data.yaml', epochs=50, imgsz=640)
+```
+## 🔗 Project Links
+* Live App: [Bird vs Drone Detection](https://bird-drone-detection.streamlit.app/)
+* MLflow Experiments: [DagsHub MLflow](https://dagshub.com/chandrapapr1501/aerial-detector-v1.mlflow/#/experiments/0)
+* Source Code: [GitHub Repository](https://github.com/Sandruez/Bird-Drone-Detection-Classification-App/tree/master)
+
+###  👥 Contributors
+Chandraprakash Kahar - Deep Learning & Computer Vision Implementation
